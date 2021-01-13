@@ -13,7 +13,7 @@ $ docker build -t jnlp-slave-robotframework .
 Run the container:
 
 ```
-$ docker run -it -v ${PWD}:/robots jnlp-slave-robotframework bash
+$ docker run -it --shm-size 2g -v ${PWD}:/robots jnlp-slave-robotframework bash
 ```
 
 This will put you inside the container with the bash prompt.
