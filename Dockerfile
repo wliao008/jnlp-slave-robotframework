@@ -11,4 +11,6 @@ RUN apt-get update && \
     pip install webdrivermanager && \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && \
     apt-get update && apt-get install -y google-chrome-stable && \
-    webdrivermanager chrome --linkpath /usr/local/bin
+    webdrivermanager chrome --linkpath /usr/local/bin && \
+    apt-get install -y firefox-esr && \
+    webdrivermanager firefox --linkpath /usr/local/bin
